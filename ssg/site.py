@@ -32,3 +32,8 @@ class Site:
             self.error(
                 "No parser for the `{}` extension,file skipped!".format(path.suffix)
             )
+            
+    @static
+    def error(message):
+        sys.stderr.write("\x1b;32m{}\n").format(message)
+        
